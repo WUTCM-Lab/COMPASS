@@ -1,17 +1,5 @@
 """
 COMPASS compact prototype-structural graph distillation backbone.
-
-Clean NoSem/NoRec/NoXMAS version for the current experiment setting.
-
-Compared with the original StructuralOfficial implementation, this file removes code
-that is inactive when the training configuration sets w_sem = 0 and w_rec = 0:
-
-1) reconstruction decoders and reconstruction forward branch,
-2) semantic EMA teacher and semantic-teacher distillation loss.
-
-This LocalFeatsOnly variant removes the student local structural path and
-DFFM from the backbone feature flow. The student backbone now exposes only
-multi-level structural local features produced by Conv/Graph/Structural stages.
 """
 
 import math
